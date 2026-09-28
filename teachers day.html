@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Glow Effects -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- Main Container Card -->
+  <main class="card">
+    
+    <!-- PHOTO 1: Header Banner Image -->
+    <div class="banner-box">
+      <img src="header.png" alt="Happy Teacher's Day Header" class="banner-img">
+    </div>
+
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <h2>Teacher Appreciation Tribute 🌸</h2>
+    </div>
+
+    <!-- BEFORE CLICK: Button View -->
+    <div id="initial-view">
+      <p class="sub-text">We have prepared a special message for you!</p>
+      <button class="open-btn" onclick="revealMessage()">Click to Open Message 💌</button>
+    </div>
+
+    <!-- AFTER CLICK: Revealed Content -->
+    <div id="message-view" class="hidden">
+      
+      <!-- PHOTO 2: Class & Teacher Photo -->
+      <div class="photo-container">
+        <img src="group.jpg" alt="Class Photo with Teacher" class="group-img">
+      </div>
+
+      <!-- Written Tribute Message -->
+      <div class="message-box">
+        <p>
+          Thank you for your endless dedication, guidance, and patience. You inspire us every day to learn, grow, and reach our full potential. Happy Teacher's Month!
+        </p>
+      </div>
+
+      <!-- Background Audio Player -->
+      <audio id="bgMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+      </audio>
+
+    </div>
+
+  </main>
+
+  <script>
+    function revealMessage() {
+      // Hide initial button state
+      document.getElementById('initial-view').style.display = 'none';
+      
+      // Reveal group photo and message
+      const messageView = document.getElementById('message-view');
+      messageView.classList.remove('hidden');
+      
+      // Auto-play song
+      const music = document.getElementById('bgMusic');
+      music.play();
+    }
+  </script>
+
+</body>
+</html>
+
