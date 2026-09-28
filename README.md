@@ -1,2 +1,0 @@
-# Mama
-My school activities 
